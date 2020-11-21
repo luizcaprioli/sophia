@@ -31,42 +31,42 @@ class _HistoryPageState extends State<HistoryPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: globalMargin,
                     child: Text(
                       "27 de Março 2019",
                       style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   Container(
-                    margin: globalMargin,
                     child: Text(
                       "Mauris id ex nec justo dictum auctor in sit amet orci. Mauris elit est, euismod at imperdiet nec, tempus vitae tortor. Phasellus dapibus augue est, at hendrerit arcu lobortis et. Vivamus faucibus imperdiet leo, id interdum mi aliquet quis. Aliquam vestibulum lacus a semper laoreet. Etiam auctor egestas justo. ",
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
+                  SizedBox(
+                    height: globalMarginSize,
+                  ),
                   Container(
-                    margin: globalMargin,
                     child: Text(
                       "27 de Março 2020",
                       style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   Container(
-                    margin: globalMargin,
                     child: Text(
                       "Mauris id ex nec justo dictum auctor in sit amet orci. Mauris elit est, euismod at imperdiet nec, tempus vitae tortor. Phasellus dapibus augue est, at hendrerit arcu lobortis et. Vivamus faucibus imperdiet leo, id interdum mi aliquet quis. Aliquam vestibulum lacus a semper laoreet. Etiam auctor egestas justo. ",
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
+                  SizedBox(
+                    height: globalMarginSize,
+                  ),
                   Container(
-                    margin: globalMargin,
                     child: Text(
                       "VALOR ARRECADADO",
                       style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   Container(
-                    margin: globalMargin,
                     color: Theme.of(context).primaryColor,
                     width: (MediaQuery.of(context).size.width -
                         (globalMarginSize * 2)),
