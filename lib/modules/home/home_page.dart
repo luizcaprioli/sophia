@@ -35,6 +35,51 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(
               children: [
+                Container(
+                  child: Text(
+                    "VALOR ARRECADADO",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        .copyWith(color: Colors.white),
+                  ),
+                ),
+                Container(
+                  color: Colors.white,
+                  width: (MediaQuery.of(context).size.width -
+                      (globalMarginSize * 2)),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        width: (MediaQuery.of(context).size.width -
+                                (globalMarginSize * 2)) *
+                            .13,
+                        height: globalPaddingSize * 3,
+                        child: Container(
+                          color: Colors.green,
+                        ),
+                      ),
+                      Container(
+                          padding: globalSmallPadding,
+                          width: (MediaQuery.of(context).size.width -
+                              (globalMarginSize * 2)),
+                          child: Text(
+                            "123.555,00 de 12.000.000,00",
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                .copyWith(
+                                    color: Theme.of(context).primaryColor),
+                          ))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -46,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: Container(
                     decoration: menuBoxDecoration,
-                    padding: globalPadding,
+                    padding: globalSmallPadding,
                     margin: globalMargin,
                     child: Text(
                       "MINHA HISTÓRIA",
@@ -66,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: Container(
                     decoration: menuBoxDecoration,
-                    padding: globalPadding,
+                    padding: globalSmallPadding,
                     margin: globalMargin,
                     child: Text(
                       "COMO AJUDAR",
@@ -74,6 +119,44 @@ class _HomePageState extends State<HomePage> {
                           color: Theme.of(context).primaryColor, fontSize: 22),
                     ),
                   ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return HelpPage();
+                      }),
+                    );
+                  },
+                  child: Container(
+                    decoration: menuBoxDecoration,
+                    padding: globalSmallPadding,
+                    margin: globalMargin,
+                    child: Text(
+                      "AGENDA",
+                      style: TextStyle(
+                          color: Theme.of(context).primaryColor, fontSize: 22),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/images/facebook.png",
+                  width: 35,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: globalPaddingSize,
+                ),
+                Image.asset(
+                  "assets/images/instagram.png",
+                  width: 35,
+                  color: Colors.white,
                 )
               ],
             )

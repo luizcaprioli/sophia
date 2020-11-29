@@ -14,6 +14,8 @@ double globalMarginSize = 12;
 double globalPaddingSize = 24.0;
 
 EdgeInsets globalPadding = EdgeInsets.all(globalPaddingSize);
+EdgeInsets globalSmallPadding = EdgeInsets.all(globalPaddingSize / 2);
+
 EdgeInsets globalMargin = EdgeInsets.all(globalMarginSize);
 
 BoxDecoration menuBoxDecoration = BoxDecoration(

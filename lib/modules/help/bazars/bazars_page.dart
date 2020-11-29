@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sophia/shared/theme/default_theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BazarsPage extends StatefulWidget {
   @override
@@ -30,38 +31,49 @@ class _BazarsPageState extends State<BazarsPage> {
                 style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(color: Colors.pink),
-              padding: globalPadding,
-              margin: globalMargin,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "BAZAR 123",
-                        style: TextStyle(
-                            color: Theme.of(context).accentColor, fontSize: 22),
-                      ),
-                      Text(
-                        "CIDADE - bAIRRO",
-                        style: TextStyle(
-                          color: Theme.of(context).accentColor,
-                          fontSize: 18,
+            GestureDetector(
+              onTap: () async {
+                const url = 'https://goo.gl/maps/AZjByqsHNoKRW9nd9';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(color: Colors.pink),
+                padding: globalPadding,
+                margin: globalMargin,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "BAZAR 123",
+                          style: TextStyle(
+                              color: Theme.of(context).accentColor,
+                              fontSize: 22),
                         ),
-                      ),
-                    ],
-                  ),
-                  Icon(
-                    Icons.map,
-                    size: 44,
-                    color: Colors.white,
-                  ),
-                ],
+                        Text(
+                          "CIDADE - bAIRRO",
+                          style: TextStyle(
+                            color: Theme.of(context).accentColor,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.map,
+                      size: 44,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

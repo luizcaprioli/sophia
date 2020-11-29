@@ -54,50 +54,12 @@ class _HistoryPageState extends State<HistoryPage> {
                   Container(
                     child: Text(
                       "Mauris id ex nec justo dictum auctor in sit amet orci. Mauris elit est, euismod at imperdiet nec, tempus vitae tortor. Phasellus dapibus augue est, at hendrerit arcu lobortis et. Vivamus faucibus imperdiet leo, id interdum mi aliquet quis. Aliquam vestibulum lacus a semper laoreet. Etiam auctor egestas justo. ",
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                   SizedBox(
                     height: globalMarginSize,
                   ),
-                  Container(
-                    child: Text(
-                      "VALOR ARRECADADO",
-                      style: Theme.of(context).textTheme.headline6,
-                    ),
-                  ),
-                  Container(
-                    color: Theme.of(context).primaryColor,
-                    width: (MediaQuery.of(context).size.width -
-                        (globalMarginSize * 2)),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          width: (MediaQuery.of(context).size.width -
-                                  (globalMarginSize * 2)) *
-                              .13,
-                          height: globalPaddingSize * 3,
-                          child: Container(
-                            color: Colors.green,
-                          ),
-                        ),
-                        Container(
-                            padding: globalPadding,
-                            width: (MediaQuery.of(context).size.width -
-                                (globalMarginSize * 2)),
-                            child: Text(
-                              "123.555,00 de 12.000.000,00",
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2
-                                  .copyWith(
-                                      color: Theme.of(context).accentColor),
-                            ))
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
